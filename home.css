@@ -1,0 +1,336 @@
+#userLocation {
+  color: #333;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px
+}
+
+#userLocation>div>i {
+  padding-right: 10px;
+}
+
+#exploreContainer {
+  background-color: #efefef;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+#exploreContainer>div {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#exploreTitle {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+
+#exploreBody {
+  font-weight: 300;
+  color: #333;
+}
+
+#exploreButton {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+#howContainer {
+  padding-top: 16px;
+  padding-bottom: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+
+#howContainer >div{
+  margin-top: 36px;
+}
+
+#howTitle {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.howButton{
+  position: relative;
+  width: 100%;
+  /* height: 100px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.howButton::before{
+  content: "";
+  background-color: rgb(247, 247, 247);
+  border-radius: 18px;
+  width: calc(100% - 12px);
+  left: 12px;
+  height: 100%;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 12px 0px #d4d4d4;
+  transition: background-color 0.3s;
+}
+
+.howButton:hover::before{
+  background-color: rgb(253, 237, 255);
+}
+
+.howButton>*{
+  position: relative;
+}
+
+.howLabel{
+  float: left;
+  background-color: rgb(159, 75, 211);
+  position: absolute;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  height: 24px;
+  text-align: center;
+  left: 0;
+}
+
+.howContent{
+  padding-left: 42px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-weight: 500;
+}
+
+.howContent>i{
+  padding-right: 16px;
+  color: #646464;
+}
+
+
+#restaurantsContainer{
+  background-color: #efefef;
+  padding-top: 48px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#restaurantsTitle{
+  font-size: 26px;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+
+.restaurantCard{
+  position: relative;
+  background-color: white;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px 0px #d4d4d4;
+}
+
+.restaurantBackground{
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.restaurantNewLabel{
+  position: absolute;
+  top: 16px;
+  font-size: 13px;
+  right: 16px;
+  background-color: rgb(129, 255, 169);
+  color: rgb(41, 155, 77);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+}
+
+.restaurantFooter{
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.restaurantTitle{
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 4px;
+}
+
+.restaurantCity{
+  font-weight: 300;
+}
+
+.restaurantHeart{
+  position: absolute;
+  font-size: 24px;
+  right: 46px;
+  top: 16px;
+}
+
+.restaurantHeart>i{
+  position: absolute;
+}
+
+.restaurantHeart>.fa-solid{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.restaurantHeart>.fa-solid:hover{
+  opacity: 1;
+  color: #9356DC;
+}
+
+
+
+@keyframes homeLoaderKeyframes {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#homeLoader{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(15px);
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: homeLoaderKeyframes 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+/* From  https://loading.io/css/ */
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #9356DC;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  #howContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  #restaurantsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
