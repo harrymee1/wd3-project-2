@@ -190,7 +190,7 @@ main{
   transition: width 0.5s ease-in-out;
 }
 
-.dishContainer:hover>.dishCheck, .dishContainer:active>.dishCheck{
+.dishContainer:hover>.dishCheck, .dishContent:active>.dishCheck{
   width: 60px;
 }
 
@@ -199,7 +199,7 @@ main{
   transition: transform 0.5s;
 }
 
-.dishContainer:hover>.dishCheck>i, .dishContainer:active>.dishCheck>i{
+.dishContainer:hover>.dishCheck>i, .dishContent:active>.dishCheck>i{
   transform: translateX(0px) rotate(-360deg) ;
 }
 
