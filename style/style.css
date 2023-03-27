@@ -62,11 +62,12 @@ footer .logo{
   width: 20px;
 }
 
-button {
+button,.button {
   border: none;
   background: rgb(78, 43, 254);
   background: linear-gradient(0deg, rgba(78, 43, 254, 1) 0%, rgba(244, 0, 255, 1) 100%);
   color: white;
+  display: inline-block;
   border-radius: 100px;
   font-size: 18px;
   padding-top: 12px;
